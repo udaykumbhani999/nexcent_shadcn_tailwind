@@ -17,7 +17,7 @@ const Community = () => {
         />
       </div>
       <div className="flex item-center justify-between flex-wrap w-full">
-        <div className="lg:max-w-[299px] flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
+        <div className="lg:max-w-[299px] shadow-md rounded-md flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
           <div className="flex flex-col items-center justify-center gap-3 lg:gap-4">
             <span>
               <Membership />
@@ -33,7 +33,7 @@ const Community = () => {
             }
           />
         </div>
-        <div className="lg:max-w-[299px] flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
+        <div className="lg:max-w-[299px] shadow-md rounded-md flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
           <div className="flex flex-col items-center justify-center gap-3 lg:gap-4">
             <span>
               <Association />
@@ -49,7 +49,7 @@ const Community = () => {
             }
           />
         </div>
-        <div className="lg:max-w-[299px] flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
+        <div className="lg:max-w-[299px] shadow-md rounded-md flex flex-col gap-2 items-center justify-center w-1/1 md:w-1/2 lg:w-1/3 h-50 md:h-70 p-6">
           <div className="flex flex-col items-center justify-center gap-3 lg:gap-4">
             <span>
               <Clubgrp />

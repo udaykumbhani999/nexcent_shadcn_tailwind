@@ -9,6 +9,7 @@ import Community from "./components/manual/Community/Community";
 import Customer from "./components/manual/Customer/Customer";
 import Marketing from "./components/manual/Marketing/Marketing";
 import Footerframe from "./components/manual/Footerframe/Footerframe";
+import Footer from "./components/manual/Footer/Footer";
 
 function App() {
   return (
@@ -47,10 +48,14 @@ function App() {
               <Marketing />
             </div>
           </div>
-           <div className="bg-grey">
+          <div className="bg-grey">
             <div className="container">
               <Footerframe />
-              
+            </div>
+          </div>
+          <div className="bg-light-black">
+            <div className="container">
+              <Footer />
             </div>
           </div>
         </div>
