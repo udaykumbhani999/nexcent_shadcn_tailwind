@@ -1,16 +1,17 @@
-import { TypographyH2 } from "../Typography/TypographyH2";
-import { TypographyP } from "../Typography/TypographyP";
+
 import { Image } from "../../../assets/images/Image";
 import { Button } from "@/components/ui/button";
 import Right from "@/assets/icons/Right";
+import { Typography } from "../Typography/Typography";
 const Marketing = () => {
   return (
     <div className="flex flex-col items-center justify-between gap-4 pt-8 lg:pt-12 pb-8 lg:pb-12">
       <div className="flex flex-col items-center justify-between gap-2">
-        <TypographyH2 Heading2={"Caring is the new marketing"} />
-        <TypographyP
+        <Typography variant="h2" children={"Caring is the new marketing"} />
+        <Typography
           className="text-center w-full lg:max-w-[628px]"
-          para_content={
+          variant="p"
+          children={
             "The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​"
           }
         />
@@ -21,9 +22,10 @@ const Marketing = () => {
             <img src={Image.MarketingFirst} alt="MarketingFirst" />
           </div>
           <div className="mt-[-88px] flex flex-col items-center justify-center gap-3 lg:gap-4 p-4 bg-grey rounded-md drop-shadow-xl/25 max-w-[250px] sm:max-w-[317px]">
-            <TypographyP
+            <Typography
               className="text-center text-dark-grey-foreground font-semibold"
-              para_content={
+              variant="p"
+              children={
                 "Creating Streamlined Safeguarding Processes with OneRen"
               }
             />
@@ -46,9 +48,10 @@ const Marketing = () => {
             <img src={Image.MarketingFirst} alt="MarketingFirst" />
           </div>
           <div className="mt-[-88px] flex flex-col items-center justify-center gap-3 lg:gap-4 p-4 bg-grey rounded-md drop-shadow-xl/25 max-w-[250px] sm:max-w-[317px]">
-            <TypographyP
+            <Typography
               className="text-center text-dark-grey-foreground font-semibold"
-              para_content={
+              variant="p"
+              children={
                 "Creating Streamlined Safeguarding Processes with OneRen"
               }
             />
@@ -71,9 +74,10 @@ const Marketing = () => {
             <img src={Image.MarketingFirst} alt="MarketingFirst" />
           </div>
           <div className="mt-[-88px] flex flex-col items-center justify-center gap-3 lg:gap-4 p-4 bg-grey rounded-md drop-shadow-xl/25 max-w-[250px] sm:max-w-[317px]">
-            <TypographyP
+            <Typography
               className="text-center text-dark-grey-foreground font-semibold"
-              para_content={
+              variant="p"
+              children={
                 "Creating Streamlined Safeguarding Processes with OneRen"
               }
             />

@@ -1,19 +1,21 @@
 import Membership from "@/assets/icons/Membership";
-import { TypographyH2 } from "../Typography/TypographyH2";
-import { TypographyP } from "../Typography/TypographyP";
+
 import Association from "@/assets/icons/Association";
 import Clubgrp from "@/assets/icons/Clubgrp";
+import { Typography } from "../Typography/Typography";
 
 const Community = () => {
   return (
     <div className="flex flex-col items-center justify-between gap-2 lg:gap-4 pt-8 lg:pt-10">
       <div className="flex flex-col items-center justify-between gap-2">
-        <TypographyH2
-          Heading2={"Manage your entire community in a single system"}
+        <Typography
+          variant="h2"
+          children={"Manage your entire community in a single system"}
         />
-        <TypographyP
+        <Typography
           className="text-center"
-          para_content={"We have been working with some Fortune 500+ clients"}
+          variant="p"
+          children={"We have been working with some Fortune 500+ clients"}
         />
       </div>
       <div className="flex item-center justify-between flex-wrap w-full">
@@ -26,9 +28,9 @@ const Community = () => {
               Membership Organisations
             </span>
           </div>
-          <TypographyP
+          <Typography
             className="text-center"
-            para_content={
+            children={
               "Our membership management software provides full automation of membership renewals and payments"
             }
           />
@@ -42,9 +44,10 @@ const Community = () => {
               Membership Organisations
             </span>
           </div>
-          <TypographyP
+          <Typography
             className="text-center"
-            para_content={
+            variant="p"
+            children={
               "Our membership management software provides full automation of membership renewals and payments"
             }
           />
@@ -58,9 +61,10 @@ const Community = () => {
               Membership Organisations
             </span>
           </div>
-          <TypographyP
+          <Typography
             className="text-center"
-            para_content={
+            variant="p"
+            children={
               "Our membership management software provides full automation of membership renewals and payments"
             }
           />

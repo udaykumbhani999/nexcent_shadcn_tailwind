@@ -1,8 +1,9 @@
 import Count from "@/assets/icons/Count";
-import { TypographyP } from "../Typography/TypographyP";
+
 import Clubs from "@/assets/icons/Clubs";
 import Events from "@/assets/icons/Events";
 import Payments from "@/assets/icons/Payments";
+import { Typography } from "../Typography/Typography";
 
 const Achievement = () => {
   return (
@@ -14,9 +15,10 @@ const Achievement = () => {
             business reinvent itself
           </span>
         </h2>
-        <TypographyP
+        <Typography
           className="text-black-foreground"
-          para_content={"We reached here with our hard work and dedication"}
+          variant="p"
+          children={"We reached here with our hard work and dedication"}
         />
       </div>
       <div className="flex flex-col items-center justify-between w-full lg:max-w-[540px] gap-10">

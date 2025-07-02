@@ -1,66 +1,36 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/manual/header/Header";
-import Hero from "./components/manual/Hero/Hero";
-import Client from "./components/manual/Client/Client";
-import Unlock from "./components/manual/Unlock/Unlock";
-import Calender from "./components/manual/Calender/Calender";
-import Achievement from "./components/manual/Achievement/Achievement";
-import Community from "./components/manual/Community/Community";
-import Customer from "./components/manual/Customer/Customer";
-import Marketing from "./components/manual/Marketing/Marketing";
-import Footerframe from "./components/manual/Footerframe/Footerframe";
 import Footer from "./components/manual/Footer/Footer";
+
+// Import pages
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Features from "./pages/Features";
+import Product from "./pages/Product";
+import Testimonial from "./pages/Testimonial";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <div className="bg-grey">
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/testimonial" element={<Testimonial />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+        <div className="bg-light-black">
           <div className="container">
-            <Hero />
-          </div>
-          <div className="bg-white pb-8 lg:pb-12">
-            <div className="container">
-              <Client />
-              <Community />
-              <Unlock />
-            </div>
-          </div>
-
-          <div className="bg-grey">
-            <div className="container">
-              <Achievement />
-            </div>
-          </div>
-          <div className="bg-white pb-8 lg:pb-12">
-            <div className="container">
-              <Calender />
-            </div>
-          </div>
-          <div className="bg-grey">
-            <div className="container">
-              <Customer />
-            </div>
-          </div>
-          <div className="bg-white">
-            <div className="container">
-              <Marketing />
-            </div>
-          </div>
-          <div className="bg-grey">
-            <div className="container">
-              <Footerframe />
-            </div>
-          </div>
-          <div className="bg-light-black">
-            <div className="container">
-              <Footer />
-            </div>
+            <Footer />
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </Router>
   );
 }
 

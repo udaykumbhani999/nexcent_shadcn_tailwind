@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Image } from "@/assets/images/Image";
 import { TypographyH1 } from "../Typography/TypographyH1";
-import { TypographyP } from "../Typography/TypographyP";
+
 
 import {
   Carousel,
@@ -12,6 +12,7 @@ import {
   // CarouselNext,
   // CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Typography } from "../Typography/Typography";
 
 const Hero = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -44,8 +45,9 @@ const Hero = () => {
               <div className="w-full md:max-w-[450px] lg:max-w-[657px] flex flex-col gap-5 md:gap-6 lg:gap-8">
                 <div className="flex flex-col gap-2.5 lg:gap-4">
                   <TypographyH1 />
-                  <TypographyP
-                    para_content={
+                  <Typography
+                    variant="p"
+                    children={
                       "Where to grow your business as a photographer: site or social media?"
                     }
                   />
@@ -70,8 +72,9 @@ const Hero = () => {
               <div className="w-full md:max-w-[450px] lg:max-w-[657px] flex flex-col gap-5 md:gap-6 lg:gap-8">
                 <div className="flex flex-col gap-2.5 lg:gap-4">
                   <TypographyH1 />
-                  <TypographyP
-                    para_content={
+                  <Typography
+                    variant="p"
+                    children={
                       "Where to grow your business as a photographer: site or social media?"
                     }
                   />
@@ -96,8 +99,9 @@ const Hero = () => {
               <div className="w-full md:max-w-[450px] lg:max-w-[657px] flex flex-col gap-5 md:gap-6 lg:gap-8">
                 <div className="flex flex-col gap-2.5 lg:gap-4">
                   <TypographyH1 />
-                  <TypographyP
-                    para_content={
+                  <Typography
+                    variant="p"
+                    children={
                       "Where to grow your business as a photographer: site or social media?"
                     }
                   />

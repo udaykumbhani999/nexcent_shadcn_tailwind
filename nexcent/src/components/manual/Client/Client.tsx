@@ -1,5 +1,4 @@
-import { TypographyH2 } from "../Typography/TypographyH2";
-import { TypographyP } from "../Typography/TypographyP";
+
 import Client1 from "@/assets/icons/Client1";
 import Client2 from "@/assets/icons/Client2";
 import Client3 from "@/assets/icons/Client3";
@@ -7,15 +6,17 @@ import Client4 from "@/assets/icons/Client4";
 import Client5 from "@/assets/icons/Client5";
 import Client6 from "@/assets/icons/Client6";
 import Client7 from "@/assets/icons/Client7";
+import { Typography } from "../Typography/Typography";
 
 const Client = () => {
   return (
     <div className="flex flex-col items-center justify-between gap-2 lg:gap-4 pt-8 lg:pt-10">
       <div className="flex flex-col items-center justify-between gap-2">
-        <TypographyH2 Heading2={"Our Clients"} />
-        <TypographyP
+        <Typography variant="h2" children={"Our Clients"} />
+        <Typography
           className="text-center"
-          para_content={"We have been working with some Fortune 500+ clients"}
+          variant="p"
+          children={"We have been working with some Fortune 500+ clients"}
         />
       </div>
       <div className="flex item-center justify-between flex-wrap w-full">

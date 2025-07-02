@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../../ui/button";
 import {
   NavigationMenu,
@@ -19,14 +20,22 @@ const navLinks = [
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActiveLink = (href: string) => {
+    if (href === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <header className="w-full bg-grey pt-[22px] pb-[22px]">
       <div className="nav-container mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <Nexcent />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -34,12 +43,16 @@ const Header = () => {
           <NavigationMenuList className="hidden lg:flex items-center gap-[50px]">
             {navLinks.map((link) => (
               <NavigationMenuItem key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-black-foreground hover:font-bold hover:text-primary-foreground"
+                <Link
+                  to={link.href}
+                  className={`text-black-foreground hover:font-bold hover:text-primary-foreground transition-colors ${
+                    isActiveLink(link.href)
+                      ? "font-bold text-primary-foreground"
+                      : ""
+                  }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
@@ -103,14 +116,18 @@ const Header = () => {
               </button>
               <nav className="flex flex-col gap-3">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
-                    className="text-black-foreground text-lg font-medium hover:font-bold hover:text-primary-foreground"
+                    to={link.href}
+                    className={`text-black-foreground text-lg font-medium hover:font-bold hover:text-primary-foreground transition-colors ${
+                      isActiveLink(link.href)
+                        ? "font-bold text-primary-foreground"
+                        : ""
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
               <div className="mt-auto flex flex-col gap-1 pt-0">

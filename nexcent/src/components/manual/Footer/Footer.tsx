@@ -1,11 +1,12 @@
 import Nexcentlogo from "@/assets/icons/Nexcentlogo";
-import { TypographyP } from "../Typography/TypographyP";
+
 import Instagram from "@/assets/icons/Instagram";
 import Dribble from "@/assets/icons/Dribble";
 import Twitter from "@/assets/icons/Twitter";
 import Youtube from "@/assets/icons/Youtube";
 import { Input } from "@/components/ui/input";
 import Send from "@/assets/icons/Send";
+import { Typography } from "../Typography/Typography";
 
 const Footer = () => {
   return (
@@ -17,13 +18,14 @@ const Footer = () => {
             <Nexcentlogo />
           </a>
           <div className="text-white-foreground flex flex-col gap-2">
-            <TypographyP
+            <Typography
               className="text-grey"
-              para_content={"Copyright © 2020 Nexcent ltd."}
+              children={"Copyright © 2020 Nexcent ltd."}
             />
-            <TypographyP
+            <Typography
               className="text-grey"
-              para_content={"All rights reserved"}
+              variant="p"
+              children={"All rights reserved"}
             />
           </div>
           <div className="flex items-center gap-4">
